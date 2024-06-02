@@ -12,6 +12,9 @@ const expresiones = {
   inputNombre: /^[A-Za-z\s]{4,50}$/,
   inputContrasena: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,50}$/,
   //inputRepetirContrasena: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,50}$/,
+  inputCorreo:  /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  inputCelular: /^[+51]+[0-9]{9}$/,
+  inputRuc: /[0-9]{11}$/
 };
 
 const campos = {
@@ -19,6 +22,9 @@ const campos = {
   inputNombre: false,
   inputContrasena: false,
   inputRepetirContrasena: false,
+  inputCorreo: false,
+  inputCelular: false,
+  inputRuc: false
 };
 
 const validarFormulario = (e) => {
@@ -35,6 +41,15 @@ const validarFormulario = (e) => {
       break;
     case "inputRepetirContrasena":
       validarContrasena(e.target, 'inputRepetirContrasena');
+      break;
+    case "inputCorreo":
+      validarCampo(expresiones.inputCorreo, e.target, 'inputCorreo');
+      break;
+    case "inputCelular":
+      validarCampo(expresiones.inputCelular, e.target, 'inputCelular');
+      break;
+    case "inputRuc":
+      validarCampo(expresiones.inputRuc, e.target, 'inputRuc');
       break;
   }
 
