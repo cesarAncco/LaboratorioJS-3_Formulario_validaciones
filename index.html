@@ -63,6 +63,38 @@
                   El RUC debe tener 11 digitos.
                 </div>
               </div>
+              <div class="form-group col-md-4">
+                <label for="inputCuidad">Cuidad:</label>
+                <select id="inputCuidad" name="inputCuidad" class="form-control">
+                    <option value="" selected>Seleccione la cuidad</option>
+                    <option  value="arequipa">Arequipa</option>
+                    <option  value="cusco">Cusco</option>
+                    <option  value="lima">Lima</option>
+                </select>
+                <div class="invalid-feedback">Debe elegir una cuidad</div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputComentario">Comentario:</label>
+                <textarea class="form-control" name="inputComentario" id="inputComentario"></textarea>
+                <div class="invalid-feedback">
+                  El comentario no puede estar vacio.
+                </div>
+              </div>
+              <!-- <div class="form-group col-md-4">
+                <input type="radio" id="inputMasculino" name="inputGenero" value="Masculino">
+                <label for="inputMasculino">Masculino</label>
+                <input type="radio" id="inputFemenino" name="inputGenero" value="Femenino">
+                <label for="inputFemenino">Femenino</label>
+                <div class="invalid-feedback">Debe elegir un opcion</div>
+              </div> -->
+              <div class="form-group col-md-4">
+                <label for="inputImagen">Imágen</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputImagen" name="inputImagen">
+                    <label class="custom-file-label" for="inputImagen">Seleccionar Archivo</label>
+                </div>
+                <div class="invalid-feedback">Debe elegir una imagen</div>
+              </div>
             </div>
             <div>
               <button class="btn btn-primary" type="submit">Enviar</button>
